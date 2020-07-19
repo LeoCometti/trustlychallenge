@@ -10,13 +10,13 @@ namespace TrustlyChallenge.Model
     {
         public GitHubRepository()
         {
-            FileExtensionInfo = new List<GroupedExtension>();
+            GroupedExtensionInfo = new List<GroupedExtension>();
         }
 
         [Key]
         public int Id { get; set; }
         [Required(ErrorMessage = "This filed cannot be empty")]
         public string Url { get; set; }
-        public List<GroupedExtension> FileExtensionInfo { get; set; }
+        public List<GroupedExtension> GroupedExtensionInfo { get; set; }
     }
 }

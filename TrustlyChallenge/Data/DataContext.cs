@@ -14,7 +14,7 @@ namespace TrustlyChallenge.Data
         {
         }
 
-        public DbSet<FileInformation> Files { get; set; }
-        public DbSet<GitHubRepository> GitHub { get; set; }
+        public DbSet<GroupedExtension> GroupedFiles { get; set; }
+        public DbSet<GitHubRepository> GitHubRepo { get; set; }
     }
 }
