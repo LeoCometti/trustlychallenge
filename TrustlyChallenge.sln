@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrustlyChallenge", "TrustlyChallenge\TrustlyChallenge.csproj", "{4572EFC3-02B8-4BB1-BB2B-4C976ED66072}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4572EFC3-02B8-4BB1-BB2B-4C976ED66072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4572EFC3-02B8-4BB1-BB2B-4C976ED66072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4572EFC3-02B8-4BB1-BB2B-4C976ED66072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4572EFC3-02B8-4BB1-BB2B-4C976ED66072}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61746F9B-EE1F-4323-883C-66C1C4F5148E}
+	EndGlobalSection
+EndGlobal
