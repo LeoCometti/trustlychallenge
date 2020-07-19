@@ -11,7 +11,7 @@ COPY ["TrustlyChallenge/TrustlyChallenge.csproj", "TrustlyChallenge/"]
 RUN dotnet restore "TrustlyChallenge/TrustlyChallenge.csproj"
 COPY . .
 WORKDIR "/src/TrustlyChallenge"
-RUN dotnet build "TrustlyChallenge.csproj" -c Release -o /app/build
+RUN dotnet build "TrustlyChallenge.csproj" -c Release -o /app/build #RUN dotnet build "TrustlyChallenge.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "TrustlyChallenge.csproj" -c Release -o /app/publish
@@ -20,3 +20,5 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "TrustlyChallenge.dll"]
+
+#cmd -> docker build -f Dockerfile -t "project:latest" ..
