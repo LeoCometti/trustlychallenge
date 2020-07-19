@@ -112,7 +112,7 @@ namespace TrustlyChallenge.Controllers
 
             using (var client = GetGithubHttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", GetCredentials());
+                //client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", GetCredentials());
 
                 var bodyJson = await GetJTokenFromRepository(client, gitHubAddress);
 
