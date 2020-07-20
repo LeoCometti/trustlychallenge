@@ -112,8 +112,6 @@ namespace TrustlyChallenge.Controllers
 
             using (var client = GetGithubHttpClient())
             {
-                //client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", GetCredentials());
-
                 var bodyJson = await GetJTokenFromRepository(client, gitHubAddress);
 
                 var nameFiles = bodyJson.SelectTokens("$.[?(@.type == 'file')].name").Select(token => token.Value<string>());
@@ -159,12 +157,6 @@ namespace TrustlyChallenge.Controllers
                     {"User-Agent", "Github-API-Test" },
                 },
             };
-        }
-
-        static string GetCredentials()
-        {
-            var credentials = string.Format(System.Globalization.CultureInfo.InvariantCulture, "{0}:", "dfe2f8f847f879e1d342de676a1bf909a0afe1f0");
-            return Convert.ToBase64String(Encoding.ASCII.GetBytes(credentials));
         }
 
         static async Task<JToken> GetJTokenFromRepository(HttpClient client, GitHubAddress gitHubContent)
